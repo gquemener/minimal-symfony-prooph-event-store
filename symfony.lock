@@ -83,6 +83,9 @@
     "prooph/event-store": {
         "version": "v7.3.2"
     },
+    "prooph/event-store-bus-bridge": {
+        "version": "v3.1.0"
+    },
     "prooph/event-store-symfony-bundle": {
         "version": "v0.4"
     },

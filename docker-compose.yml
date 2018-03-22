@@ -4,10 +4,10 @@ services:
     php:
         image: prooph/php:7.1-cli-xdebug
         volumes:
-            - .:/data
+            - .:/app
         ports:
             - 8080:8080
-        command: php -S 0.0.0.0:8080 -t /data/public/
+        command: php -S 0.0.0.0:8080 -t /app/public/
 
     mysql:
         image: mysql:5.7
