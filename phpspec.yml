@@ -1,0 +1,2 @@
+extensions:
+    App\PhpSpec\ProophExtension: ~

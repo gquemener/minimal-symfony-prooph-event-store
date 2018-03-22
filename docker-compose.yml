@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+    php:
+        image: prooph/php:7.1-cli-xdebug
+        volumes:
+            - .:/app
+        ports:
+            - 8080:8080
+        command: php -S 0.0.0.0:8080 -t /app/public/
+
+    mysql:
+        image: mysql:5.7
+        environment:
+            MYSQL_ROOT_PASSWORD: password
