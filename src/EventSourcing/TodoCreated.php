@@ -10,6 +10,6 @@ final class TodoCreated extends AggregateChanged
 {
     public function description(): string
     {
-        return $this->description;
+        return $this->payload()['description'];
     }
 }

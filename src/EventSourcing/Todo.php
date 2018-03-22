@@ -10,6 +10,7 @@ use Prooph\EventSourcing\AggregateChanged;
 final class Todo extends AggregateRoot
 {
     private $id;
+    private $description;
 
     public static function create(
         TodoId $todoId,
@@ -23,6 +24,11 @@ final class Todo extends AggregateRoot
         return $self;
     }
 
+    public function description(): string
+    {
+        return $this->description;
+    }
+
     protected function aggregateId(): string
     {
         return $this->id->toString();
@@ -33,6 +39,7 @@ final class Todo extends AggregateRoot
         switch (get_class($event)) {
             case TodoCreated::class:
                 $this->id = TodoId::fromString($event->aggregateId());
+                $this->description = $event->description();
                 break;
         }
     }

@@ -6,7 +6,7 @@ namespace App\EventSourcing;
 
 use Ramsey\Uuid\Uuid;
 
-final class TodoId
+class TodoId
 {
     private $todoId;
 
